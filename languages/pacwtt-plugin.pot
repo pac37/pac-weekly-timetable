@@ -1,0 +1,351 @@
+# Copyright (C) 2015 PAC Weekly Timetable
+# This file is distributed under the same license as the PAC Weekly Timetable package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PAC Weekly Timetable 0.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pac-weekly-"
+"timetable\n"
+"POT-Creation-Date: 2015-09-16 21:24:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-pacwtt-activity-list-table.php:26
+msgid "activity"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:27
+msgid "activities"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:40
+msgid "ID"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:41
+#: includes/class-pacwtt-activity-list-table.php:416
+#: pac-weekly-timetable.php:328
+msgid "Name"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:42
+#: includes/class-pacwtt-activity-list-table.php:417 includes/scripts.php:214
+#: pac-weekly-timetable.php:339
+msgid "Description"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:95
+msgid "No activities avaliable."
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:239
+#: includes/class-pacwtt-activity-list-table.php:366 includes/scripts.php:87
+#: includes/scripts.php:161 pac-weekly-timetable.php:313
+msgid "Insufficient privileges. Operation aborted."
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:292
+msgid "Activity"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:299
+msgid "New interval data"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:300 includes/scripts.php:211
+msgid "Day of the week"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:302
+msgid "Select a day..."
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:310
+msgid "Start time (HH:MM):"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:314
+msgid "Finish time  (HH:MM):"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:318
+msgid "Description :"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:323
+msgid "Add New Interval"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:325
+msgid "Related intervals"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:352
+msgid "Activity name can't be empty."
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:356
+#: pac-weekly-timetable.php:301
+msgid "Database insertion failed."
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:361
+msgid "Activity Updated."
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:376
+msgid "Edit Interval"
+msgstr ""
+
+#: includes/class-pacwtt-activity-list-table.php:377
+msgid "Update"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:17
+msgid "Sunday"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:18
+msgid "Monday"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:19
+msgid "Tuesday"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:20
+msgid "Wednesday"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:21
+msgid "Thursday"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:22
+msgid "Friday"
+msgstr ""
+
+#: includes/class-pacwtt-model-interval.php:23
+msgid "Saturday"
+msgstr ""
+
+#: includes/scripts.php:68 pac-weekly-timetable.php:459
+msgid "Error"
+msgstr ""
+
+#: includes/scripts.php:69 pac-weekly-timetable.php:470
+msgid "Success"
+msgstr ""
+
+#: includes/scripts.php:106
+msgid "Start time: hour must be a number from 0 to 23."
+msgstr ""
+
+#: includes/scripts.php:109
+msgid "Start time: minute must be a number from 0 to 59."
+msgstr ""
+
+#: includes/scripts.php:112
+msgid "Finish time: hour must be a number from 0 to 23."
+msgstr ""
+
+#: includes/scripts.php:115
+msgid "Finish time: minute must be a number from 0 to 59."
+msgstr ""
+
+#: includes/scripts.php:137
+msgid "Database Error: Unable to insert the specified interval."
+msgstr ""
+
+#: includes/scripts.php:142
+msgid "New record successfully added."
+msgstr ""
+
+#: includes/scripts.php:173
+msgid "Database Error: Unable to delete the specified interval."
+msgstr ""
+
+#: includes/scripts.php:178
+msgid "Record successfully deleted."
+msgstr ""
+
+#: includes/scripts.php:212
+msgid "Start"
+msgstr ""
+
+#: includes/scripts.php:213
+msgid "Finish"
+msgstr ""
+
+#: includes/scripts.php:215
+msgid "Operations"
+msgstr ""
+
+#: includes/scripts.php:226
+msgid "Delete"
+msgstr ""
+
+#: includes/scripts.php:232
+msgid "No results found."
+msgstr ""
+
+#: includes/shortcodes.php:47
+msgid "Error: no activity's id specified."
+msgstr ""
+
+#: includes/shortcodes.php:63
+msgid "Error: requested id not found."
+msgstr ""
+
+#. translators: %s value of 'dnsize' shortcode setting
+#: includes/shortcodes.php:81
+msgid "Error: dnsize=%s parameter value not allowed."
+msgstr ""
+
+#: includes/shortcodes.php:103
+msgid "Error: global option 'monday' value not valid."
+msgstr ""
+
+#. translators: %s value of 'layout' plugin/shortcode setting
+#: includes/shortcodes.php:111
+msgid "Error: layout=%s parameter value not allowed."
+msgstr ""
+
+#: includes/shortcodes.php:123
+msgid "Fatal Error: layout=%s parameter value not allowed."
+msgstr ""
+
+#: pac-weekly-timetable.php:77
+msgid "This plugin requires WordPress version %s or higher."
+msgstr ""
+
+#: pac-weekly-timetable.php:169 pac-weekly-timetable.php:170
+#: pac-weekly-timetable.php:259
+msgid "All Activities"
+msgstr ""
+
+#: pac-weekly-timetable.php:183
+msgid "Add New Activity"
+msgstr ""
+
+#: pac-weekly-timetable.php:184
+msgid "Add New"
+msgstr ""
+
+#: pac-weekly-timetable.php:195 pac-weekly-timetable.php:196
+#: pac-weekly-timetable.php:393
+msgid "Options"
+msgstr ""
+
+#: pac-weekly-timetable.php:238
+msgid ""
+"This plugin provides the ability to create simple weekly timetables. A "
+"timetable corresponds to an \"Activity\", which contains \"Intervals\" "
+"defined by a starting time, a finishing time and an optional description."
+msgstr ""
+
+#: pac-weekly-timetable.php:240
+msgid ""
+"Every timetable can be displayed using the [pacwtt id=xx] shortcode, where "
+"xx is the activity's id value as shown in the \"All Activities\" page. The "
+"\"Option\" page allow to choose the timetables' look, setting some default "
+"value for the shortcode and a user defined css."
+msgstr ""
+
+#: pac-weekly-timetable.php:242
+msgid ""
+"Note: this plugin is aimed to semplicity so it dosen't enforce too many "
+"controls over the data and doesn't ask for confirmations for delete "
+"operations and similar actions."
+msgstr ""
+
+#: pac-weekly-timetable.php:244
+msgid "Details:"
+msgstr ""
+
+#: pac-weekly-timetable.php:246
+msgid ""
+"All Activities - list and manage available Activities, click one Activity to "
+"access its intervals."
+msgstr ""
+
+#: pac-weekly-timetable.php:247
+msgid "Add New - create a new Activity."
+msgstr ""
+
+#: pac-weekly-timetable.php:248
+msgid ""
+"Options - set shortcode's default options and an optional custom defined CSS."
+msgstr ""
+
+#: pac-weekly-timetable.php:276
+msgid "New Activity"
+msgstr ""
+
+#: pac-weekly-timetable.php:296
+msgid "Field 'name' can't be empty."
+msgstr ""
+
+#: pac-weekly-timetable.php:306
+msgid "New Activity Added."
+msgstr ""
+
+#: pac-weekly-timetable.php:329 pac-weekly-timetable.php:340
+#: pac-weekly-timetable.php:437
+msgid "(HTML tags are not allowed)"
+msgstr ""
+
+#: pac-weekly-timetable.php:401
+msgid "Shortcodes settings"
+msgstr ""
+
+#: pac-weekly-timetable.php:402
+msgid "Defaut values"
+msgstr ""
+
+#: pac-weekly-timetable.php:406
+msgid "Layout"
+msgstr ""
+
+#: pac-weekly-timetable.php:408
+msgid "Text"
+msgstr ""
+
+#: pac-weekly-timetable.php:410
+msgid "Time Boxes"
+msgstr ""
+
+#: pac-weekly-timetable.php:414 pac-weekly-timetable.php:417
+msgid "Week starts on monday"
+msgstr ""
+
+#: pac-weekly-timetable.php:427
+msgid "CSS Settings"
+msgstr ""
+
+#: pac-weekly-timetable.php:428
+msgid "Customize the look of the timetables"
+msgstr ""
+
+#: pac-weekly-timetable.php:434
+msgid "Custom CSS"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "PAC Weekly Timetable"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/pac37/pac-weekly-timetable"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Timetables generation with admin interface and shortcodes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.metapac.it"
+msgstr ""
