@@ -79,12 +79,10 @@ function pacwtt_install() {
 	}
 	
 	// Custom Tables
-	$table_activity = $wpdb->prefix . 'pacwtt_activity';
-	$table_interval = $wpdb->prefix . 'pacwtt_interval';
 	$pacwtt_db_version = '1.0';
 	$charset_collate = $wpdb->get_charset_collate();
 
-	$sql_create_table_activity = "CREATE TABLE $table_activity (
+	$sql_create_table_activity = "CREATE TABLE " . PACWTT_DB_TABLE_ACTIVITY . " (
 	  			      id int(10) NOT NULL AUTO_INCREMENT,
 	                              name varchar(32) NOT NULL,
 	                              description varchar(255) NOT NULL,
@@ -92,7 +90,7 @@ function pacwtt_install() {
 				      UNIQUE (name)
 	                              ) $charset_collate;";
 
-	$sql_create_table_interval = "CREATE TABLE $table_interval (
+	$sql_create_table_interval = "CREATE TABLE " . PACWTT_DB_TABLE_INTERVAL . " (
 	 			      id int(10) unsigned NOT NULL AUTO_INCREMENT,
 	 			      id_activity int(10) unsigned NOT NULL COMMENT 'Foreign key',
 	 			      weekday tinyint(4) NOT NULL COMMENT 'a number from 0 to 6, starting sunday (php format)',
@@ -122,21 +120,22 @@ function pacwtt_uninstall() {
 	if (!defined('ABSPATH') && ! defined('WP_UNINSTALL_PLUGIN' ))
 		exit();
 	
-	// Delete option from options table
+	// Delete user options
 	delete_option('pacwtt_option_layout');
 	delete_option('pacwtt_option_monday');
 
-	// Remove any additional options and custom tables
+	// Delete plugin info option
 	delete_option('pacwtt_db_version');
 
-	$sql_remove_tables = "DROP TABLE " + PACWTT_DB_TABLE_ACTIVITY + ";";
-	$sql_remove_tables .= "DROP TABLE " + PACWTT_DB_TABLE_INTERVAL + ";";
+	// Remove all plugin's options
+	$sql_remove_table = "DROP TABLE " . PACWTT_DB_TABLE_ACTIVITY . ";";
+	$wpdb->query($sql_remove_table);
 	
-	$wpdb->query($sql_remove_tables);
-
+	$sql_remove_table = "DROP TABLE " . PACWTT_DB_TABLE_INTERVAL . ";";
+	$wpdb->query($sql_remove_table);
+	
 	// TODO: verify if it is necessary
 	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-	dbDelta($sql_remove_tables);
 }
 register_uninstall_hook( __FILE__ , 'pacwtt_uninstall' );
 
