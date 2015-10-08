@@ -31,7 +31,6 @@ add_action('template_redirect', 'pacwtt_trigger_check');
 
 /** Insert CSS uri into html header of the frontend pages */
 function register_css() {
-	global $pacwtt_plugin_url;
 	global $pacwtt_trigger;
 	
 	wp_register_style( 'pacwtt-css-tables',  home_url() ."/?pacwtt-style=tables");	

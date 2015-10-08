@@ -57,6 +57,9 @@ A: Yes, here you can find useful information: [GitHub Page](https://github.com/p
 
 == Changelog ==
 
+= 0.7.1 =
+* Bugfixes related to the install process and the activation process
+
 = 0.7 =
 * First public release.
 
