@@ -17,6 +17,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Global Constant
  * 
  ******************/
+global $wpdb;
 
 $pacwtt_plugin_dir_path = plugin_dir_path( __FILE__ );
 $pacwtt_plugin_url = plugin_dir_url( __FILE__ );
@@ -114,9 +115,35 @@ register_activation_hook( __FILE__ , 'pacwtt_install' );
 
 /** Plugin uninstallation */
 function pacwtt_uninstall() {
-	// do something
+	global $wpdb;
+	
+	// Called on plugin deletion (NOT on deactivation) 
+	// If uninstall/delete not called from WordPress then exit
+	if (!defined('ABSPATH') && ! defined('WP_UNINSTALL_PLUGIN' ))
+		exit();
+	
+	// Delete option from options table
+	delete_option('pacwtt_option_layout');
+	delete_option('pacwtt_option_monday');
+
+	// Remove any additional options and custom tables
+	delete_option('pacwtt_db_version');
+
+	$sql_remove_tables = "DROP TABLE " + PACWTT_DB_TABLE_ACTIVITY + ";";
+	$sql_remove_tables .= "DROP TABLE " + PACWTT_DB_TABLE_INTERVAL + ";";
+	
+	$wpdb->query($sql_remove_tables);
+
+	// TODO: verify if it is necessary
+	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+	dbDelta($sql_remove_tables);
 }
-register_deactivation_hook( __FILE__ , 'pacwtt_uninstall' );
+register_uninstall_hook( __FILE__ , 'pacwtt_uninstall' );
+
+function pacwtt_deactivate() {
+	// Nothing to do
+}
+register_deactivation_hook( __FILE__ , 'pacwtt_deactivate' );
 
 /** Plugin initialization */
 function pacwtt_init() {
