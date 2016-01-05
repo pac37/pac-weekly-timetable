@@ -1,0 +1,112 @@
+/*
+ * CSS used as default for CSS options (custom css) 
+ * A style for each layout class.
+ * rif. colorscheme: https://coolors.co/app/f7f7f7-ceaeae-6ea4bf-c2efeb-ecfee8 
+ */
+
+/*********************/
+/* Layout time-boxes */
+/*********************/
+
+/* Borderless table, with spacing between columns */
+table.pacwtt-time-boxes {
+ border: none;
+ border-spacing: 5px;
+}
+
+.pacwtt-time-boxes 
+.pacwtt-time-boxes tr,
+.pacwtt-time-boxes thead th,
+.pacwtt-time-boxes tbody td {
+ border-collapse:collapse;
+ border: 0;
+}
+
+/* Day labels: Background color */
+.pacwtt-time-boxes thead th
+{
+  background: #6ea4bf;
+}
+
+/* Sunday label: Background color */
+.pacwtt-time-boxes thead th.pacwtt-day-data-0
+{
+  background: #ceaeae;
+}
+
+/* Activity slot color: Background color */
+.pacwtt-time-boxes tbody tr td.pacwtt-int-data {
+  background: #ECFEE8;
+}
+
+/* Activity empty slot color: Backgorund color */
+.pacwtt-time-boxes tbody tr td.pacwtt-int-empty {
+  background: #F7F7F7;
+}
+
+/* Text style */
+.pacwtt-time-boxes thead tr th,
+.pacwtt-time-boxes tbody tr td {
+  text-align:center;
+}
+.pacwtt-time-boxes tbody tr td.pacwtt-int-data span.pacwtt-int-time {
+  font-weight:bold;
+}
+.pacwtt-time-boxes tbody tr td.pacwtt-int-data span.pacwtt-int-description {
+  font-style: italic;
+}
+
+/***************/
+/* Layout text */
+/***************/
+
+/* no borders */
+.pacwtt-text {
+ border: none;
+}
+.pacwtt-text tr,
+.pacwtt-text tbody th,
+.pacwtt-text tbody td {
+ border-collapse:collapse;
+ border: 0;
+}
+
+/* Sunday name: bottom border */
+.pacwtt-text tbody tr.pacwtt-day-name th {
+  background: #6ea4bf;
+  border-bottom: 1px dotted black;
+}
+
+/* Sunday name: bottom border */
+.pacwtt-text tbody.pacwtt-day-0 tr.pacwtt-day-name th {
+  background: #ceaeae;
+}
+
+/* alternate activity color */
+.pacwtt-text tbody tr.pacwtt-day-data-0 td {
+  background: #f7f7f7;
+}
+
+/* Day group shadow */
+.pacwtt-text tbody {
+ box-shadow: 0 1px 10px #000000;
+}
+
+/* Text */
+.pacwtt-text tbody tr.pacwtt-day-name th
+{
+  text-align:center;
+}
+
+.pacwtt-text tbody tr td.pacwtt-int-time
+{
+  text-align: right;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.pacwtt-text tbody tr td.pacwtt-int-description
+{
+  text-align: left;
+  font-style: italic;
+}
