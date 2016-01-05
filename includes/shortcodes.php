@@ -75,7 +75,7 @@ function pacwtt_shortcode_handler( $atts, $content = null ) {
 			// Do nothing
 			break;
 		default:
-			// Invalid scortcode parametr
+			// Invalid scortcode parameter
 			return '<b>' . sprintf(
 				/* translators: %s value of 'dnsize' shortcode setting */
 				__("Error: dnsize=%s parameter value not allowed.", 'pacwtt-plugin'),

@@ -3,7 +3,7 @@
 Plugin Name: PAC Weekly Timetable
 Plugin URI: https://github.com/pac37/pac-weekly-timetable
 Description: Timetables generation with admin interface and shortcodes
-Version: 0.7
+Version: 0.7.1
 Auothor: Pietro Amedeo Cigoli
 Author URI: http://www.metapac.it
 Text Domain: pacwtt-plugin
@@ -123,6 +123,7 @@ function pacwtt_uninstall() {
 	// Delete user options
 	delete_option('pacwtt_option_layout');
 	delete_option('pacwtt_option_monday');
+	delete_option('pacwtt_option_css');
 
 	// Delete plugin info option
 	delete_option('pacwtt_db_version');
@@ -387,10 +388,23 @@ function pacwtt_settings_new_activities(){
  ******************************/
 
 function pacwtt_register_settings(){
+	global $pacwtt_plugin_dir_path;
+	
 	// Options: all the available ones, and their sanitize callbacks
 	register_setting( 'pacwtt-options-group', 'pacwtt_option_layout' );
 	register_setting( 'pacwtt-options-group', 'pacwtt_option_monday' );
 	register_setting( 'pacwtt-options-group', 'pacwtt_option_css', 'pacwtt_sanitize_options_css');
+
+	// Options: default values (after activation)
+	$pacwtt_option_layout = get_option('pacwtt_option_layout');
+	$pacwtt_option_monday = get_option('pacwtt_option_monday');
+	$pacwtt_option_css = get_option('pacwtt_option_css');
+
+	if(empty($pacwtt_option_layout) && empty($pacwtt_option_monday) && empty($pacwtt_option_css)){
+		update_option('pacwtt_option_layout', 'text');
+		update_option('pacwtt_option_monday', 'on');
+		update_option('pacwtt_option_css', file_get_contents( $pacwtt_plugin_dir_path . "css/default.css"));
+	}
 }
 
 function pacwtt_sanitize_options_css( $input ) {
@@ -402,17 +416,10 @@ function pacwtt_sanitize_options_css( $input ) {
 function pacwtt_settings_options(){
 	global $pacwtt_plugin_dir_path;
 	
-	// Options: actual values
+	// Options: current values
 	$pacwtt_option_layout = get_option('pacwtt_option_layout');
 	$pacwtt_option_monday = get_option('pacwtt_option_monday');
 	$pacwtt_option_css = get_option('pacwtt_option_css');
-	
-	// Options: default values (after activation)
-	if(empty($pacwtt_option_layout) && empty($pacwtt_option_monday) && empty($pacwtt_option_css)){
-		$pacwtt_option_layout = 'text';
-		$pacwtt_option_monday = 'enabled';
-		$pacwtt_option_css = file_get_contents( $pacwtt_plugin_dir_path . "css/default.css");
-	}
 	
 	// Options: input form
 	?>
