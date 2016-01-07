@@ -470,7 +470,7 @@ function pacwtt_settings_options(){
 						<em><?php _e( '(HTML tags are not allowed)', 'pacwtt-plugin' )?></em>
 					</th>
 					<td>
-						<textarea rows="10" cols="50" id="pacwtt_option_css" name="pacwtt_option_css" style="font-family:monospace;" ><?php echo esc_textarea($pacwtt_option_css); ?></textarea>					
+						<textarea rows="15" cols="80" id="pacwtt_option_css" name="pacwtt_option_css" style="font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;" ><?php echo esc_textarea($pacwtt_option_css); ?></textarea>					
 					</td>
 				</tr>
 			  </tbody>
