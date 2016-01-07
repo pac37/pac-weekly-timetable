@@ -71,6 +71,11 @@ table.pacwtt-time-boxes {
  border: 0;
 }
 
+/* interval row: time and info columns equally spaced */
+.pacwtt-text tbody td {
+  width:50%;
+}
+
 /* Sunday name: bottom border */
 .pacwtt-text tbody tr.pacwtt-day-name th {
   background: #6ea4bf;
